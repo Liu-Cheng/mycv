@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\hfuzz=100pt
+
+\usepackage[UTF8]{ctex}
+%\usepackage{xeCJK} 
+%\setCJKmainfont{SimSun} % 设置中文字体为宋体
+\usepackage{xcolor}
+\usepackage{fontspec}
+
+\usepackage[backend=biber, style=numeric, sorting=ydnt,
+            giveninits=false, maxnames=999, minnames=999]{biblatex}
+
+\AtEveryBibitem{%
+  \clearfield{pages}%
+  \clearfield{pagination}%
+}
+
+% 在每条文献末尾输出 ranking（如 CCF-A）
+\renewbibmacro*{finentry}{%
+  \iffieldundef{ranking}
+    {}
+    {\space\textbf{[}\printfield{ranking}\textbf{]}}%
+  \finentry
+}
+
+\addbibresource{publications.bib}
+
+\definecolor{darkred}{RGB}{139,0,0}
+% 隐藏标题（关键！）
+\defbibheading{none}{}  % 定义一个无标题的 heading
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\renewcommand{\refname}{}
+
+\name{刘成} % Your name
+\address{Email: liucheng@ict.ac.cn，电话：+86-18110054096}
+\address{地址：北京市海淀区科学院南路6号} % Your secondary addess (optional)
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{rSection}{个人简介}
+    \vspace{-1em}
+\item 目前就职于中国科学院计算技术研究所，是处理器芯片全国重点实验室的副研究员,研究方向为领域专用芯片设计，容错芯片设计、AI辅助芯片设计等，主持来自中科院先导专项、科技部重点研发、军工专项、基金委以及航天科技集团等多个相关的研究项目，将专用芯片以及硬件加速器应用于星载智能计算、大数据处理等场景。发表集成电路设计相关的学术论文近100篇，其中通信/一作50余篇，出版英文专著1部、书籍章节2个，获得\textcolor{darkred}{\textbf{2021年IEEE Transaction on Computers (体系结构顶刊，CCF-A) 年度唯一最佳论文奖}}以及GLVLSI国际会议最佳论文奖。Google Scholar引用总数2000余次，H-index 25，研究工作也获得了产业界认可，获得2019年中科院科技成果转化特等奖以及\textcolor{darkred}{\textbf{2023年华为奥林帕斯先锋奖(国际范围内评选，每年4项)}}。指导学生获得多个国际竞赛前三的奖项，其中包括ICCAD的EDA竞赛一等奖、DAC系统设计竞赛二、三等奖、CVPR低功耗计算机视觉挑战赛三等奖、PPoPP 2025图计算竞赛三等奖。
+
+担任IEEE Transactions on Emerging Topics in Computing (TETC) 编委， IEEE Transactions on Parallel and Distributed Systems (TPDS) 评审委员，长期担任DAC、FPT、ICLR、NeurIPS、ICLR、DFTS等国际学术会议的程序委员，以及领域内多个期刊如TCAD、TVLSI、TPDS等的审稿人，目前是IEEE高级会员以及CCF高级会员。多次获得中科院计算所优秀员工称号，2023年参加中组部青年拔尖人才计划竞争，是所内唯二（共18人参选）进入当年会评的申请人。
+    \vspace{-0.5em}
+\end{rSection}
+
+\begin{rSection}{教育与工作经历}
+{\bf 中科院计算所} \hfill {\em 2018-06 - 至今} \\ 
+计算机体系结构国家重点实验室/处理器芯片全国重点实验室，副研究员\\
+{\bf 新加坡国立大学} \hfill {\em 2016-12 - 2018-06} \\ 
+计算机学院，博后\\
+{\bf 香港大学} \hfill {\em 2011-09 - 2016-11} \\ 
+计算机工程专业，电机与电子工程系\\
+{\bf 哈尔滨工业大学} \hfill {\em 2007-09 - 2009-07} \\
+微电子学与固体电子学专业， 航天学院\\
+{\bf 哈尔滨工业大学} \hfill {\em 2003-09 - 2007-07} \\
+电子信息科学与技术专业，航天学院 \\
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{近期项目经历}
+% {\bf SoCPilot: 基于LLM的端到端的SoC芯片设计工具} \hfill {\em 2023 - 至今} \\ 
+% 领导开发了一个由大语言模型（LLM）驱动的端到端片上系统（SoC）自动化设计框架SoCPilot，应对现代 SoC 设计中日益严峻的挑战——包括功能复杂度激增、验证瓶颈、架构定制需求以及不断压缩的上市周期。这些问题传统上依赖大量人工干预，导致开发效率低下。尽管已有多种设计框架尝试通过自动化集成与验证缓解部分痛点，但它们通常支持的配置有限，且仍要求开发者同时具备深厚的软硬件专业知识。SoCPilot 创新性地将 LLM 深度融入 SoC 设计全流程：它能够理解用户以自然语言和高层次应用代码表达的设计需求，通过语义搜索自动选取合适的 IP 核，并构建任务依赖图；同时，LLM 与仿真器及功耗-性能-面积（PPA）预测器协同工作，通过启发式优化指导软硬件划分。对于需硬件加速的任务，LLM 能从高级描述自动生成基于高层次综合的硬件专用加速器，并借助 ESP 平台将其与其他 IP 自动集成，完成 SoC 构建与物理设计。整个流程还支持迭代式设计空间探索，并在 FPGA 上进行原型验证。实验表明，SoCPilot 能全自动地从自然语言和应用代码生成完整的嵌入式 SoC 设计，并在FPGA进行原型验证，相比纯软件方案实现了显著的性能加速，极大降低了 SoC 开发门槛和开发周期，展现出 LLM 赋能硬件设计的巨大潜力。\\
+
+
+% {\bf VeriPilot: 基于LLM的RTL代码自动Debug工具} \hfill {\em 2024 - 至今} \\ 
+% 领导开发了一个基于大语言模型（LLM）的自动化 Verilog Debug 框架 VeriPilot，模仿工程师进行数字电路设计的调试。与现有方法仅依赖测试向量和编译器反馈不同，VeriPilot 引入黄金参考模型，不仅比对设计输出，还深入比较内部变量行为，从而实现细粒度的错误定位与修复。该框架通过 LLM 分析对齐 Verilog 设计与其黄金模型中的内部变量语义，并结合静态代码分析生成的控制-数据流图（CDFG）进行逐级信号追踪，有效识别出最可疑的代码片段及其在黄金模型中的正确对应部分。这些结构化的调试线索被输入 LLM，使其能够基于因果推理而非盲目重写来生成修复方案。在 Strider 基准测试中，VeriPilot 实现了 70.2\% 的修复成功率，显著优于现有 LLM 驱动或传统自动程序修复方法，尤其在处理复杂逻辑和深层路径的设计时表现出更强的可扩展性。VeriPilot 证明，当 LLM 被赋予丰富的语义证据和严谨的程序分析引导时，可成为可靠、可验证且高效的硬件调试智能体，为未来 LLM 辅助的硬件开发开辟了新方向。\\
+
+
+% {\bf ChipPilot: 基于LLM的智能化芯片设计平台} \hfill {\em 2023 - 至今} \\ 
+% 领导开发了一个面向智能化芯片设计的云原生多模态平台ChipPilot，平台底层采用容器化的弹性分布式计算架构，并通过 Ray 统一调度大规模异构算力，实现仿真、逻辑综合、物理设计、FPGA 实现等工具的并行部署与可靠执行。在这一基础设施之上，ChipPilot 构建了面向 EDA 的 LLM 多智能体体系：规划层负责将自然语言需求解析为任务图，执行层针对具体 EDA 工具生成 Tcl 指令、监控 PPA 指标并自动化修复错误，同时借助 RAG 与领域知识库保证生成内容的正确性和工具调用的稳定性。作为平台的重要组成部分，ChipPilot 还提供一个基于 LLM 的多模态芯片数据生成与管理模块。该模块将 EDA 数据视作动态、互联、可演化的资产，可自动从开源硬件与公开工具链中采集跨层级信息（包括高层描述、RTL、网表、布局布线与寄生参数）。系统支持自动清洗、语义对齐、缺失层补全以及 AI 就绪的格式转换，构建可持续扩展的数据基础。用户可通过自然语言生成任务定制的数据子集，并在平台内完成 AI4EDA 模型训练、测试或验证。整体上，通过将云原生分布式计算、LLM 多智能体协作与多模态 EDA 数据管理深度融合，ChipPilot 为智能化芯片设计、EDA 自动化研究和跨层协同优化提供了统一、可扩展、可重复的基础设施平台。\\
+
+
+% {\bf 面向智能感知的端侧深度学习处理器设计} \hfill {\em 2019 - 至今} \\ 
+% 从芯片体系结构、加速器设计到运行时系统协同优化，持续开展端侧智能芯片与系统的研究，并参与了国内最早基于 RISC-V 的大小核异构智能芯片的设计与流片。在架构层面，面向 IoT 场景中深度学习与信号处理并存的特征提出 SigDLA，通过可编程数据重排结构统一支持不规则信号处理与神经网络计算，提升端侧智能芯片的通用性与能效。在模型与加速器协同设计方面，提出 LUT-DLA 和 DeepBurning-MixQ，通过极低比特宽量化、向量查找表表示、DSP 打包以及 NAS 协同优化，实现模型结构、数据宽度与硬件资源的统一设计，显著增强专用加速器的可扩展性。在极低功耗场景下，领导开发了 MCU-MixQ，通过子字节 SIMD 与 HW/SW 协同优化在 MCU 级平台上实现高效 MPNN 推理。此外，还提出面向端侧的 AI 余能计算方法，将传统计算任务自动近似为神经网络并调度至 AI 引擎的空闲周期执行，从体系结构到运行时实现对芯片计算资源的整体优化。这些研究共同构成了面向端侧智能计算的芯片–系统协同设计路线，在资源受限环境中显著提升了智能处理能力与能效。\\
+
+%\end{rSection}
+
+\begin{rSection}{科研项目}
+{\bf 跨层芯片设计与优化软硬件平台} \hfill {\em 2024 - 2028} \\ 
+中科院先导B计划课题，1100万，主持\\
+{\bf 基于智能计算存储器的大数据处理系统设计} \hfill {\em 2023 - 2024} \\
+专项项目，130万，主持\\
+{\bf 领域专用芯片跨层参数优化方法} \hfill {\em 2023 - 2025} \\
+国家重点研发计划子课题，160万，主持\\
+{\bf 弹性容错深度学习处理器设计} \hfill {\em 2022 - 2025} \\
+自然科学基金面上项目，57万，主持 \\
+{\bf 基于FPGA的高能效图计算加速器设计} \hfill {\em 2020 - 2022} \\
+自然科学基金青年项目，27万，主持 \\
+{\bf 面向遥感图像识别的智能微系统可靠性评测} \hfill {\em 2024 - 2024} \\ 
+航天科技集团，50万，主持\\
+{\bf 面向COTS器件的容错深度学习工具链设计} \hfill {\em 2023 - 2023} \\
+航天科技集团，30万，主持 \\
+{\bf AI辅助的领域专用芯片设计自动化方法研究} \hfill {\em 2023 - 2024} \\ 
+处理器芯片重点实验室培育项目，30万，主持\\
+{\bf 深度学习处理器自动化容错设计方法} \hfill {\em 2021 - 2022} \\
+计算机体系结构重点实验室培育项目，30万，主持 \\
+{\bf 人工智能芯片测评技术研究} \hfill {\em 2023 - 2024} \\
+专项项目，290万，参与 \\
+{\bf 基于分离式内存的近存智能计算架构研究} \hfill {\em 2024 - 2025} \\
+专项项目，130万，参与 \\
+{\bf 基于微存储的计算型存储} \hfill {\em 2023 - 2024} \\
+华为，120万，参与 \\
+{\bf 物端智能无人机系统设计} \hfill {\em 2019 - 2020} \\
+项目子课题，600万，参与 \\
+{\bf 开源物端智能处理器} \hfill {\em 2020 - 2021} \\
+中科院先导C课题，1200万，参与 \\
+{\bf 基于智能网卡与智能存储设备的流式计算系统研究} \hfill {\em 2020 - 2021} \\
+华为，120万，参与 \\
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Publications
+%----------------------------------------------------------------------------------------
+\begin{rSection}{论文}
+\end{rSection}
+\nocite{*}  % 引入所有条目
+\printbibliography[heading=none]
+
+\end{document}

@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\hfuzz=100pt
+\usepackage[UTF8]{ctex}
+%\usepackage{xeCJK} 
+%\setCJKmainfont{SimSun} % 设置中文字体为宋体
+\usepackage{fontspec}
+%\usepackage[backend=biber,style=ieee]{biblatex} 
+\usepackage[backend=biber,style=ieee,sorting=ydnt,maxnames=99]{biblatex}
+\addbibresource{epub.bib}  
+\defbibheading{bibliography}[\refname]{%  
+  % We may add publication list name here, but it can be empty as well. 
+  }  
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{hyperref}
+
+\name{Cheng Liu} % Your name
+\address{Institute of Computing Technology, Chinese Academy of Sciences}
+\address{No.6 Kexueyuan South Road, Haidian, Beijing, China} 
+\address{Email: liucheng@ict.ac.cn \hspace{0.2cm} Tel: +86-18110054096\hspace{0.2cm} \href{https://liu-cheng.github.io/}{Homepage} {\phantom{link}} \href{https://scholar.google.com/citations?user=LVWU_VQAAAAJ&hl=en}{Google Scholar}}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{rSection}{Biographical Sketch}
+    \vspace{-1em}
+\item Dr. Liu is an Associate Professor at the State Key Laboratory of Processors (SKLP), Institute of Computing Technology (ICT), Chinese Academy of Sciences (CAS). He received his Ph.D. degree from The University of Hong Kong in 2016, and his Master’s and Bachelor’s degrees from Harbin Institute of Technology in 2009 and 2007, respectively.
+
+Dr. Liu’s research focuses on reconfigurable and reliable architectures for AI computing systems, with particular emphasis on large-scale spatial architectures, domain-specific accelerators, and hardware–software co-design. His work addresses key challenges in performance scalability, energy efficiency, and system reliability, especially for data-intensive and large-model AI workloads. He has published around 100 papers in leading international conferences and journals, and has received multiple awards, including Best Paper Awards at the Great Lakes Symposium on VLSI (2021) and IEEE Transactions on Computers (2021), the CAS Outstanding Award for Technological Achievements Transformation (2019), and the Huawei Olympus Award (2023).
+
+Dr. Liu serves as an Associate Editor for IEEE Transactions on Emerging Topics in Computing, Member of the Review Board for IEEE Transactions on Parallel and Distributed Systems, and as a Technical Program Committee member for major conferences including DAC, FPT, ICLR, and AAAI. He is a Senior Member of IEEE and CCF, and a member of ACM.
+
+\end{rSection}
+
+\begin{rSection}{Education \& Appointments}
+{\textbf{Associate Professor}, Institute of Computing Technology} \hfill {\em 2018-06 - now} \\
+{\textbf{Research Fellow}, National University of Singapore} \hfill {\em 2016-12 - 2018-06} \\ 
+{\textbf{Ph.D.} Computer Engineering, The University of Hong Kong} \hfill {\em 2011-09 - 2016-11} \\ 
+{\textbf{M.E.} Electronic Engineering, Harbin Institute of Technology} \hfill {\em 2007-09 - 2009-07} \\
+{\textbf{B.E.} Electronic Engineering, Harbin Institute of Technology} \hfill {\em 2003-09 - 2007-07} \\
+\vspace{-1em}
+\end{rSection}
+
+
+\begin{rSection}{Academic Service}
+{2024-now: Associate Editor of IEEE Transactions on Emerging Topics in Computing} \\
+{2025-now: Review Board Member of IEEE Transactions on Parallel and Distributed Systems} \\
+{2022: TPC of DFT, FPT, CFTC} \\
+{2023: TPC of ATS, FPT, DFTS, CFTC, NeurIPS} \\
+{2024: TPC of DFTS, FPT, ICLR, ICML}\\ 
+{2025: TPC of DAC, FPT, DFTS, NeurIPs, AAAI, ICLR}\\
+{2018-now: Reviewer for TCAD, TVLSI, TC, TPDS, TECS, TRETS, and others}\\ 
+
+\vspace{-1em}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Research Grants}
+{[PI] Cross-Layer Processor Optimization Infrastructures, CAS，11,000,000¥} \hfill {\em 2024 - 2028} \\ 
+{[PI] Reliability Evaluation of Remote Sensing Systems, CASC, 500,000¥} \hfill {\em 2024 - 2024} \\ 
+{[PI] Computational Storage Based Big Data Processing, MIP, 1,300,000¥} \hfill {\em 2023 - 2024} \\ 
+{[PI] Resilient AI Tool Chain for COTS Devices, CASC, 300,0000¥} \hfill {\em 2023 - 2023} \\
+{[PI] Elastic Fault-tolerant DLA Architecture, NSFC, 570,000¥} \hfill {\em 2022 - 2025} \\
+{[PI] Energy-efficient Graph Processing Acceleration on FPGAs, NSFC, 270,000¥} \hfill {\em 2020 - 2022} \\
+{[PI] Automatic DLA Hardening, SKLCA, 300,000¥} \hfill {\em 2021 - 2022} \\
+{[Co-PI] Cross-Layer Chip DSE Methods, NKRDP, 1,600,0000¥} \hfill {\em 2023 - 2025} \\
+{[Co-PI] Micostorage-based Computational Storage, Huawei, 1,200,000¥} \hfill {\em 2023 - 2024} \\
+{[Co-PI] Open AIoT Processor Architecture Design, CAS, 12,000,000¥} \hfill {\em 2020 - 2021} \\
+{[Co-PI] Computation Storage based Stream Processing, Huawei, 1,200,000¥} \hfill {\em 2020 - 2021} \\
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Publications
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Selected Publications}
+\end{rSection}
+\nocite{*} 
+\printbibliography
+\end{document}
